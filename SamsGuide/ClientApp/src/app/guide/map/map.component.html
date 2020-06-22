@@ -1,0 +1,17 @@
+<div *ngIf="inputFilter">
+  <agm-map [latitude]="inputFilter.lat"
+           [longitude]="inputFilter.long"
+           [zoom]="zoom">
+    <agm-marker [iconUrl]="'/images/blueMarker.png'"
+                [markerDraggable]="true"
+                (dragEnd)="onMakerDragEnd($event)"
+                [latitude]="inputFilter.lat"
+                [longitude]="inputFilter.long"></agm-marker>
+
+    <div *ngFor="let place of places">
+      <agm-marker [latitude]="place.lat"
+                  [longitude]="place.long"></agm-marker>
+    </div>
+
+  </agm-map>
+</div>

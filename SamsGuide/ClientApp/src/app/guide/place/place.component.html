@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <!--<div *ngIf="place.photoUrl">
+    <img class="card-img-top" [src]="place.photoUrl" alt="Card image cap">
+  </div>-->
+  <div class="card-header" *ngIf="place.icon">
+    <img [src]="place.icon">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{place.name}}</h5>
+    <a href="#" class="btn btn-primary">Guide me</a>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="row">
+  <h2 class="m-3">List och places</h2>
+</div>
+<div class="row">
+  <div *ngFor="let place of places" class="col-sm-3 m-3">
+    <place [place]="place"></place>
+  </div>
+</div>
